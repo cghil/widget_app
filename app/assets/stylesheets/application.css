@@ -12,5 +12,18 @@
  *
  *= require_tree .
  *= require bootstrap.css
+ *= require jquery.gridster.css
  *= require_self
  */
+
+body {
+  background-color: #004756;
+}
+
+li {
+  background-color: #fff;
+}
+
+ul {
+  list-style-type: none;
+}
