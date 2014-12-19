@@ -1,3 +1,8 @@
+<%= form_for recipe_search_path, url: {action: 'search'} do |f| %>
+  <%= f.label :search_for_recipe %>
+  <%= f.submit %>
+<% end %>
+
 <h3 class="text-center">
   Choose A Recipe
 </h3>
