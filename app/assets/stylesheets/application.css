@@ -22,8 +22,20 @@ body {
 
 li {
   background-color: #fff;
+  overflow: scroll;
 }
 
 ul {
   list-style-type: none;
+}
+
+.resize {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 300px;
+  height: auto;
+}
+
+.border-divider-btm {
+  border-bottom: 1px solid #ddd;
 }
