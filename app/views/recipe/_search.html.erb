@@ -1,17 +1,20 @@
-<%= form_for recipe_search_path, url: {action: 'search', controller: 'recipe' }, class: "text-center" do |f| %>
+<%= form_for recipe_search_path, url: {action: 'search', controller: 'recipe' }, class: "text-center recipe" do |f| %>
   <%= f.label :Find_Recipe, class: "text-center" %>
-  <%= f.text_field :search, class: 'text-center' %>
-  <%= f.submit "Search", class: 'text-center' %>
+  <%= f.text_field :search, class: 'text-center input-recipe-search' %>
+  <%= f.submit "Search", class: 'text-center search-button' %>
 <% end %>
 
-<h3 class="text-center">
+<h3 class="text-center recipe-title">
   Click A Recipe
 </h3>
-<% @recipes= Recipe.get_recipe %>
-  <% recipes = @recipes['recipes'] %>
-  <% recipes.each do |recipe| %>
-  <p class="text-center"> <%= recipe['title'] %> </p>
-  <a href="<%= recipe['source_url']%>">
-    <img class="resize thumbnail" src="<%= recipe['image_url'] %>"/>
-  </a>
-<% end %>
+
+<div class="recipes">
+  <% @recipes= Recipe.get_recipe %>
+    <% recipes = @recipes['recipes'] %>
+    <% recipes.each do |recipe| %>
+    <p class="text-center"> <%= recipe['title'] %> </p>
+    <a href="<%= recipe['source_url']%>">
+      <img class="resize thumbnail" src="<%= recipe['image_url'] %>"/>
+    </a>
+  <% end %>
+</div>
