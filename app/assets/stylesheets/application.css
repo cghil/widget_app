@@ -39,3 +39,7 @@ ul {
 .border-divider-btm {
   border-bottom: 1px solid #ddd;
 }
+
+.h10 {
+  height: 10px;
+}
