@@ -1,8 +1,11 @@
-<%= form_for recipe_search_path, url: {action: 'search', controller: 'recipe' }, class: "text-center recipe" do |f| %>
-  <%= f.label :Find_Recipe, class: "text-center" %>
-  <%= f.text_field :search, class: 'text-center input-recipe-search' %>
-  <%= f.submit "Search", class: 'text-center search-button' %>
-<% end %>
+<div class="h10"></div>
+<div class="text-center">
+  <%= form_for recipe_search_path, url: {action: 'search', controller: 'recipe' }, class: "text-center recipe" do |f| %>
+    <%= f.label :Find_recipe, class: "text-center" %>
+    <%= f.text_field :search, class: 'text-center input-recipe-search' %>
+    <%= f.submit "Search", class: 'text-center search-button' %>
+  <% end %>
+</div>
 
 <h3 class="text-center recipe-title">
   Click A Recipe
