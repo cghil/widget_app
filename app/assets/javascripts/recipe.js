@@ -13,8 +13,6 @@ function getNewRecipes(evt){
   recipeAjaxRequest.done(getRecipeData)
 }
 
-
-
 function getRecipeData(reply){
   $('.recipes').remove();
   var lengthOfRecipes= reply.recipes.length
