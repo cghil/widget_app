@@ -20,6 +20,6 @@ class Airbnb < ActiveRecord::Base
     url_nodes.each do |url|
       @urls << url.attributes['data-url'].value
     end
-    airbnb_hash = {urls: @urls, photos: @photos, prices: @prices}
+    @airbnb_hash = {urls: @urls, photos: @photos, prices: @prices}
   end
 end
