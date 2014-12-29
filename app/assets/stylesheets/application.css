@@ -43,3 +43,8 @@ ul {
 .h10 {
   height: 10px;
 }
+
+.resize-icon {
+  width: 200px;
+  height: auto;
+}
