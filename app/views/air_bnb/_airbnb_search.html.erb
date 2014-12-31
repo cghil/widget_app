@@ -1,6 +1,15 @@
 <div class="h10"></div>
 <div class="airbnb_places container">
-  <img class="resize-icon inline" src="https://raw.githubusercontent.com/cghil/widget_app/master/public/airbnb_symbol.png">
-  <h2 class="inline">Airbnb</h2>
-  <% Airbnb.get_rentals %>
+  <img class="resize-icon text-center" src="https://raw.githubusercontent.com/cghil/widget_app/master/public/airbnb_symbol.png">
+  <h1 class="text-center">Travel. Airbnb.</h1>
+  <% airbnb_results= Airbnb.get_rentals %>
+  <% # photos = airbnb_results[:photos] %>
+  <% city = airbnb_results[:city] %>
+  <% urls = airbnb_results[:urls] %>
+  <% photos = airbnb_results[:photos] %>
+  <% prices = airbnb_results[:prices] %>
+  <h2 class="text-center"><%= city %></h2>
+  <%(0..17).each do |place| %>
+    <a href="https://www.airbnb.com<%=urls[place]%> "> <img class="resize margin-left thumbnail"src="<%=photos[place]%> "></a>
+  <% end %>
 </div>
