@@ -5,7 +5,6 @@ class Airbnb < ActiveRecord::Base
     url = "https://www.airbnb.com/s/#{array_of_cities}"
     doc = Nokogiri::HTML(open(url))
     #i am filtering through all of this fucking html
-
     @urls = []
     url_nodes = doc.css('div.listing')
     url_nodes.each do |url|

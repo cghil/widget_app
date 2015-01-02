@@ -5,11 +5,16 @@
   <% airbnb_results= Airbnb.get_rentals %>
   <% # photos = airbnb_results[:photos] %>
   <% city = airbnb_results[:city] %>
+  <% city = city.gsub(/--/, " ") %>
+  <% city = city.gsub(/ /, ", ") %>
   <% urls = airbnb_results[:urls] %>
   <% photos = airbnb_results[:photos] %>
   <% prices = airbnb_results[:prices] %>
   <h2 class="text-center"><%= city %></h2>
   <%(0..17).each do |place| %>
-    <a href="https://www.airbnb.com<%=urls[place]%> "> <img class="resize margin-left thumbnail"src="<%=photos[place]%> "></a>
+    <div class="room">
+      <div class="price"> <%= prices[place] %> </div>
+      <a href="https://www.airbnb.com<%=urls[place]%> "> <img class="resize thumbnail"src="<%=photos[place]%> "></a>
+    </div>
   <% end %>
 </div>
