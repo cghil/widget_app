@@ -13,7 +13,7 @@
   <h2 class="text-center"><%= city %></h2>
   <%(0..17).each do |place| %>
     <div class="room">
-      <div class="price"> <%= prices[place] %> </div>
+      <span class="price text-center"> <%= prices[place] %> </span>
       <a href="https://www.airbnb.com<%=urls[place]%> "> <img class="resize thumbnail"src="<%=photos[place]%> "></a>
     </div>
   <% end %>

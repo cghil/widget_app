@@ -21,6 +21,11 @@ class Airbnb < ActiveRecord::Base
       room_photo_url = room_photo_url.gsub(/[()]/, '')
       @photos << room_photo_url
     end
+    @prices = []
+    price_nodes = doc.css('span.price-amount')
+    price_nodes.each do |price|
+      @prices << price.text
+    end
     @airbnb_hash = {city: array_of_cities, urls: @urls, prices: @prices, photos: @photos}
   end
 end

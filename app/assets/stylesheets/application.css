@@ -130,3 +130,16 @@ a.thumbnail.active {
   padding: 9px;
   color: #333;
 }
+
+.room {
+  position: relative;
+  width: 100%;
+}
+
+.price {
+  position: absolute;
+  width: 30px;
+  top: 10px;
+  margin-left: 5px;
+  background-color: rgba(60,63,64,0.9);
+}
