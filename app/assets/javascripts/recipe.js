@@ -18,7 +18,7 @@ function getRecipeData(reply){
   var lengthOfRecipes= reply.recipes.length
   $('h3.recipe-title').after('<div class="recipes"></div>')
   for (i=0; i<lengthOfRecipes; i++){
-    var html = '<p class="text-center">'+reply.recipes[i].title+'</p><a href='+reply.recipes[i].source_url+'><img src='+reply.recipes[i].image_url+' class="resize thumbnail"></a>'
+    var html = '<p class="text-center">'+reply.recipes[i].title+'</p><a href='+reply.recipes[i].source_url+'><img src='+reply.recipes[i].image_url+' class="resize thumbnail margin-left-15 margin-bottom text-center"></a>'
     $('.recipes').append(html)
   }
 }
