@@ -5,21 +5,23 @@ class Airbnb < ActiveRecord::Base
     url = "https://www.airbnb.com/s/#{array_of_cities}"
     doc = Nokogiri::HTML(open(url))
     #i am filtering through all of this fucking html
-    price_nodes = doc.css('span.price-amount')
-    @prices = []
-    price_nodes.each do |price|
-      @prices << price.text
-    end
-    photos_nodes = doc.css('.img-responsive-height')
-    @photos = []
-    photos_nodes.each do |image_url|
-      @photos << image_url.attributes['src'].value
-    end
+
     @urls = []
     url_nodes = doc.css('div.listing')
     url_nodes.each do |url|
       @urls << url.attributes['data-url'].value
     end
-    @airbnb_hash = {urls: @urls, photos: @photos, prices: @prices}
+    @photos = []
+    (0..(@urls.length-1)).each do |room|
+      room_url = "https://www.airbnb.com#{@urls[room]}"
+      room_doc= Nokogiri::HTML(open(room_url))
+      room_nokogiri = room_doc.at_css('.cover-img')
+      room_image= room_nokogiri.attributes["style"].value
+      my_match = /url/.match(room_image)
+      room_photo_url = my_match.post_match
+      room_photo_url = room_photo_url.gsub(/[()]/, '')
+      @photos << room_photo_url
+    end
+    @airbnb_hash = {city: array_of_cities, urls: @urls, prices: @prices, photos: @photos}
   end
 end

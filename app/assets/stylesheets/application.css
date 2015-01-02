@@ -11,7 +11,19 @@
  * file per style scope.
  *
  *= require_tree .
- *= require bootstrap.css
+ *= require base
+ *= require buttons
+ *= require forms
+ *= require grids-core
+ *= require grids-responsive
+ *= require grids-units
+ *= require grids
+ *= require menus-core
+ *= require menus-nr
+ *= require menus-paginator
+ *= require menus
+ *= require pure
+ *= require tables
  *= require jquery.gridster.css
  *= require_self
  */
@@ -29,9 +41,15 @@ ul {
   list-style-type: none;
 }
 
-.resize {
-  margin-left: 20px;
+.margin-left-15 {
+  margin-left: 15px;
+}
+
+.margin-bottom {
   margin-bottom: 20px;
+}
+
+.resize {
   width: 300px;
   height: auto;
 }
@@ -42,4 +60,73 @@ ul {
 
 .h10 {
   height: 10px;
+}
+
+.resize-icon {
+  margin-left: 50px;
+  margin-right: auto;
+  width: 200px;
+  height: auto;
+}
+
+.inline {
+  display: inline;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+       -o-transition: border .2s ease-in-out;
+          transition: border .2s ease-in-out;
+}
+
+.thumbnail > img,
+.thumbnail a > img {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #337ab7;
+}
+
+.thumbnail .caption {
+  padding: 9px;
+  color: #333;
+}
+
+.thumbnail .caption {
+  padding: 9px;
+  color: #333;
 }

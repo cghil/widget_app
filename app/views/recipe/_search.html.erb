@@ -1,9 +1,9 @@
 <div class="h10"></div>
 <div class="text-center">
-  <%= form_for recipe_search_path, url: {action: 'search', controller: 'recipe' }, class: "text-center recipe" do |f| %>
-    <%= f.label :Find_recipe, class: "text-center" %>
-    <%= f.text_field :search, class: 'text-center input-recipe-search' %>
-    <%= f.submit "Search", class: 'text-center search-button' %>
+  <%= form_for recipe_search_path, url: {action: 'search', controller: 'recipe' }, class: "pure-form" do |f| %>
+    <%= f.label :Find_recipe, class: "" %>
+    <%= f.text_field :search, class: '' %>
+    <%= f.submit "Search", class: 'pure-button pure-button-active button-large' %>
   <% end %>
 </div>
 
@@ -17,7 +17,7 @@
     <% recipes.each do |recipe| %>
     <p class="text-center"> <%= recipe['title'] %> </p>
     <a href="<%= recipe['source_url']%>">
-      <img class="resize thumbnail" src="<%= recipe['image_url'] %>"/>
+      <img class="margin-bottom margin-left resize thumbnail text-center" src="<%= recipe['image_url'] %>"/>
     </a>
   <% end %>
 </div>
