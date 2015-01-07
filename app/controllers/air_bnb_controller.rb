@@ -1,4 +1,4 @@
 class AirBnBController < ApplicationController
-  def search_airbnb
+  def search
   end
 end

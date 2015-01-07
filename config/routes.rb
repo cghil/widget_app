@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
   post 'recipe/search' => 'recipe#search'
-
+  post 'air_bnb/search' => 'air_bnb#search'
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
