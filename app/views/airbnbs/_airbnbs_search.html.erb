@@ -2,7 +2,7 @@
 <div class="airbnb_places container">
   <img class="resize-icon text-center" src="https://raw.githubusercontent.com/cghil/widget_app/master/public/airbnb_symbol.png">
   <div class="airbnb-search-form text-center">
-    <%= form_for air_bnb_search_path, url: {action: 'search', controller: 'air_bnb'}, class: "pure-form pure-form-stacked" do |f|%>
+    <%= form_for airbnbs_find_path, url: {action: 'find', controller: 'airbnbs'}, class: "pure-form pure-form-stacked" do |f|%>
     <%= f.label :search_city %>
     <%= f.text_field :search_city, class: "input-airbnb-search" %>
     <%= f.label :search_country %>

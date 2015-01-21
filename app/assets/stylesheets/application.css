@@ -139,7 +139,7 @@ a.thumbnail.active {
 .price {
   position: absolute;
   width: 40px;
-  top: 10px;
+  top: 4px;
   margin-left: 5px;
   background-color: rgba(60,63,64,0.9);
   color: white;
