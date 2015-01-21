@@ -4,13 +4,13 @@
   <div class="airbnb-search-form text-center">
     <%= form_for airbnbs_find_path, url: {action: 'find', controller: 'airbnbs'}, class: "pure-form pure-form-stacked" do |f|%>
     <%= f.label :search_city %>
-    <%= f.text_field :search_city, class: "input-airbnb-search" %>
+    <%= f.text_field :search_city, class: "input-city-airbnb" %>
     <%= f.label :search_country %>
-    <%= f.text_field :search_country, class: "input-airbnb-search" %>
+    <%= f.text_field :search_country, class: "input-country-airbnb" %>
     <%= f.submit "search", class: 'pure-button pure-button-active button-large pure-button-primary airbnb-button' %>
     <% end %>
   </div>
-  <h1 class="text-center">Travel. Airbnb.</h1>
+  <h1 class="text-center title-airbnb">Travel. Airbnb.</h1>
   <% airbnb_results= Airbnb.get_rentals %>
   <% # photos = airbnb_results[:photos] %>
   <% city = airbnb_results[:city] %>
