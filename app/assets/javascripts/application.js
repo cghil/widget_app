@@ -15,6 +15,7 @@
 //= require jquery.gridster
 //= require jquery_ujs
 //= require turbolinks
+//= require underscore
 //= require_tree .
 
 $(function(){
