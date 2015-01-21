@@ -1,11 +1,13 @@
 <div class="h10"></div>
 <div class="airbnb_places container">
   <img class="resize-icon text-center" src="https://raw.githubusercontent.com/cghil/widget_app/master/public/airbnb_symbol.png">
-  <div class="airbnb-search-form">
-    <%= form_for air_bnb_search_path, url: {action: 'search', controller: 'air_bnb'}, class: "pure-form text-center" do |f|%>
+  <div class="airbnb-search-form text-center">
+    <%= form_for airbnbs_find_path, url: {action: 'find', controller: 'airbnbs'}, class: "pure-form pure-form-stacked" do |f|%>
     <%= f.label :search_city %>
-    <%= f.text_field :search, class: "input-airbnb-search" %>
-    <%= f.submit "search", class: 'pure-button pure-button-active button-large' %>
+    <%= f.text_field :search_city, class: "input-airbnb-search" %>
+    <%= f.label :search_country %>
+    <%= f.text_field :search_country, class: "input-airbnb-search" %>
+    <%= f.submit "search", class: 'pure-button pure-button-active button-large pure-button-primary' %>
     <% end %>
   </div>
   <h1 class="text-center">Travel. Airbnb.</h1>
@@ -20,7 +22,7 @@
   <h2 class="text-center"><%= city %></h2>
   <%(0..17).each do |place| %>
     <div class="room">
-      <span class="price text-center"> <%= prices[place] %> </span>
+      <span class="price text-center"> <b>$<%= prices[place] %></b> </span>
       <a href="https://www.airbnb.com<%=urls[place]%> "> <img class="resize thumbnail"src="<%=photos[place]%> "></a>
     </div>
   <% end %>
