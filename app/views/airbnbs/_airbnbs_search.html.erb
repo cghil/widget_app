@@ -7,7 +7,7 @@
     <%= f.text_field :search_city, class: "input-airbnb-search" %>
     <%= f.label :search_country %>
     <%= f.text_field :search_country, class: "input-airbnb-search" %>
-    <%= f.submit "search", class: 'pure-button pure-button-active button-large pure-button-primary' %>
+    <%= f.submit "search", class: 'pure-button pure-button-active button-large pure-button-primary airbnb-button' %>
     <% end %>
   </div>
   <h1 class="text-center">Travel. Airbnb.</h1>
@@ -19,11 +19,13 @@
   <% urls = airbnb_results[:urls] %>
   <% photos = airbnb_results[:photos] %>
   <% prices = airbnb_results[:prices] %>
-  <h2 class="text-center"><%= city %></h2>
-  <%(0..17).each do |place| %>
-    <div class="room">
-      <span class="price text-center"> <b>$<%= prices[place] %></b> </span>
-      <a href="https://www.airbnb.com<%=urls[place]%> "> <img class="resize thumbnail"src="<%=photos[place]%> "></a>
-    </div>
-  <% end %>
+  <div class="removeable-places">
+    <h2 class="text-center"><%= city %></h2>
+    <%(0..17).each do |place| %>
+      <div class="room">
+        <span class="price text-center"> <b>$<%= prices[place] %></b> </span>
+        <a href="https://www.airbnb.com<%=urls[place]%> "> <img class="resize thumbnail"src="<%=photos[place]%> "></a>
+      </div>
+    <% end %>
+  </div>
 </div>
