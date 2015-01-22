@@ -19,13 +19,7 @@ function findRooms(evt){
 
 function getAirbnbData(reply){
   $('.removeable-places').remove();
-  var template = _.template("<div class='removeable-places'><h2 class='text-center'><%=reply.city.replace('--', ' ')%></h2>
-    <% for(i = 0; i < 18; i++){
-      <div class='room'> 
-        <span class='price text-center'> <b> <%= reply.prices[i] %> </b> </span>
-        <a href='https://www.airbnb.com<%=reply.urls[i]%>'> <img class='resize thumbnail' src='<%= reply.photos[i]%>'></a>
-      </div>
-    } %> 
-    </div>")
+  var template = _.template("<div class='removeable-places'><h2 class='text-center'><%=reply.city.replace('--', ' ')%></h2><% for(i = 0; i < 18; i++){<div class='room'> <span class='price text-center'> <b> <%= reply.prices[i] %> </b> </span><a href='https://www.airbnb.com<%=reply.urls[i]%>'> <img class='resize thumbnail' src='<%= reply.photos[i]%>'></a></div>} %></div>")
+  // something is broken here
   $('.title-airbnb').after(template)
 }
