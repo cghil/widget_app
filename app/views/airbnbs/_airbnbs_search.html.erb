@@ -4,8 +4,8 @@
   <div class="airbnb-search-form text-center">
     <%= form_for airbnbs_find_path, url: {action: 'find', controller: 'airbnbs'}, class: "pure-form pure-form-stacked" do |f|%>
     <%= f.label :search_city %>
-    <%= f.text_field :search_city, class: "input-city-airbnb" %>
-    <%= f.label :search_country %>
+    <%= f.text_field :city, class: "input-city-airbnb" %>
+    <%= f.label :country %>
     <%= f.text_field :search_country, class: "input-country-airbnb" %>
     <%= f.submit "search", class: 'pure-button pure-button-active button-large pure-button-primary airbnb-button' %>
     <% end %>
