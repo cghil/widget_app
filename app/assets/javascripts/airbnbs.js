@@ -27,7 +27,7 @@ function getAirbnbData(reply){
   }
   if (reply.city === ""){
     cityName = 'You Put A Blank Input In The Search Box'
-    ar title = "<div class='removeable-places'><h2 class='text-center city-name'>"+cityName+"</h2></div>"
+    var title = "<div class='removeable-places'><h2 class='text-center city-name'>"+cityName+"</h2></div>"
     $('.title-airbnb').after(title)
   }
   for(i=0; i<18; i++){
