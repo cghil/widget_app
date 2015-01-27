@@ -1,4 +1,7 @@
-<div class="h10"></div>
+<div class="h2"></div>
+<div class='remove opacity'>
+  <i class="fa fa-close fa-lg close-and-remove"></i>
+</div>
 <div class="text-center">
   <%= form_for recipe_search_path, url: {action: 'search', controller: 'recipe' }, class: "pure-form" do |f| %>
     <%= f.label :Find_recipe, class: "" %>

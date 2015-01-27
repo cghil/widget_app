@@ -7,6 +7,9 @@ class Airbnb < ActiveRecord::Base
     #i am filtering through all of this fucking html
     @urls = []
     url_nodes = doc.css('div.listing')
+    13.times do
+      url_nodes.pop
+    end
     url_nodes.each do |url|
       @urls << url.attributes['data-url'].value
     end
@@ -23,6 +26,9 @@ class Airbnb < ActiveRecord::Base
     end
     @prices = []
     price_nodes = doc.css('span.price-amount')
+    13.times do
+      price_nodes.pop
+    end
     price_nodes.each do |price|
       @prices << price.text
     end
@@ -34,6 +40,9 @@ class Airbnb < ActiveRecord::Base
     doc = Nokogiri::HTML(open(url))
     @urls = []
     url_nodes = doc.css('div.listing')
+    13.times do
+      url_nodes.pop
+    end
     url_nodes.each do |url|
       @urls << url.attributes['data-url'].value
     end
@@ -50,6 +59,9 @@ class Airbnb < ActiveRecord::Base
     end
     @prices = []
     price_nodes = doc.css('span.price-amount')
+     13.times do
+      price_nodes.pop
+    end
     price_nodes.each do |price|
       @prices << price.text
     end

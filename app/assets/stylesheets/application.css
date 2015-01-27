@@ -24,6 +24,7 @@
  *= require menus
  *= require pure
  *= require tables
+ *= require font-awesome
  *= require jquery.gridster.css
  *= require_self
  */
@@ -62,11 +63,27 @@ ul {
   height: 10px;
 }
 
+.h2 {
+  height: 2px;
+}
 .resize-icon {
   margin-left: 50px;
   margin-right: auto;
   width: 200px;
   height: auto;
+}
+
+.opacity {
+    opacity: 0.1;
+}
+
+.opacity:hover {
+  opacity: 1;
+   -webkit-transition-delay: 90ms;
+}
+
+.opacity-less {
+  opacity: 0.2;
 }
 
 .inline {
@@ -142,5 +159,17 @@ a.thumbnail.active {
   top: 4px;
   margin-left: 5px;
   background-color: rgba(60,63,64,0.9);
+  color: white;
+}
+
+.black-background {
+  background-color: black;
+}
+
+.inline {
+  display: inline;
+}
+
+.white-font {
   color: white;
 }
