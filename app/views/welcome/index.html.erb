@@ -1,27 +1,30 @@
 <div class="pure-g">
   <div class="pure-u-1-4">
-    <div class="pure-menu pure-menu-open">
-      <a class="pure-menu-heading"> Hello, World!</a>
-      <ul>
-        <li> <a href="#"> Home </a> </li>
-        <li> <a href="#"> About </a> </li>
-        <li class="pure-menu-heading">Add A Widget</li>
-        <li> <a href="#"> AirBnB </a> </li>
-        <li> <a href="#"> Recipe2Fork </a> </li>
-      </ul>
-    </div>
+      <div class="pure-menu pure-menu-open">
+        <a class="pure-menu-heading">Yahoo! Sites</a>
+        <ul>
+            <li><a href="#">Flickr</a></li>
+            <li><a href="#">Messenger</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Finance</a></li>
+            <li class="pure-menu-heading">More Sites!</li>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">OMG!</a></li>
+        </ul>
+      </div>
   </div>
   <div class="pure-u-3-4">
     <div class="container widget-holder">
       <div class="gridster">
           <ul class='list-widgets'>
     <!-- li data-row refers to the row number; data col refers to how many columns it will take up; x refers to the x-axis; y refers to the y-axis-->
-              <li class='widget-app'data-row="1" data-col="1" data-sizex="2" data-sizey="3">
+              <li class='widget-app overflow'data-row="1" data-col="1" data-sizex="2" data-sizey="3">
                 <%= render "recipe/search" %>
               </li>
 
-              <li class='widget-app' data-row="2" data-col="2" data-sizex="1" data-sizey="2"></li>
-              <li class='widget-app' data-row="3" data-col="2" data-sizex="2" data-sizey="2">
+              <li class='widget-app overflow' data-row="2" data-col="2" data-sizex="1" data-sizey="2"></li>
+              <li class='widget-app overflow' data-row="3" data-col="2" data-sizex="2" data-sizey="2">
                 <%= render "airbnbs/airbnbs_search" %>
               </li>
           </ul>
