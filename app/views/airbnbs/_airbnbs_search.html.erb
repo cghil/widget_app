@@ -1,4 +1,7 @@
-<div class="h10"></div>
+<div class="h2"></div>
+<div class='remove opacity'>
+  <i class="fa fa-close fa-lg close-and-remove"></i>
+</div>
 <div class="airbnb_places container">
   <img class="resize-icon text-center" src="https://raw.githubusercontent.com/cghil/widget_app/master/public/airbnb_symbol.png">
   <div class="airbnb-search-form text-center">
@@ -21,7 +24,7 @@
   <% prices = airbnb_results[:prices] %>
   <div class="removeable-places">
     <h2 class="text-center"><%= city %></h2>
-    <%(0..17).each do |place| %>
+    <%(0..4).each do |place| %>
       <div class="room">
         <span class="price text-center"> <b>$<%= prices[place] %></b> </span>
         <a href="https://www.airbnb.com<%=urls[place]%> "> <img class="resize thumbnail"src="<%=photos[place]%> "></a>
