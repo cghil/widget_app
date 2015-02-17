@@ -15,8 +15,12 @@ var undoRemove = function(that){
 	})
 };
 
+
 function removeWidget(){
 	var $that = $(this).parent().parent();
-	$that.remove();
+	var id = $that.attr('id');
+	id = parseInt(id)
+	gridster.remove_widget($('.gridster li').eq(id))
+	// $that.remove();
 	undoRemove($that);
 };
