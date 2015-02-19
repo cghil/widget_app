@@ -176,6 +176,18 @@ a.thumbnail.active {
   background-color: black;
 }
 
+.blue-background {
+  background-color: #004756;
+}
+
+.white-background {
+  background-color: #fff;
+}
+
+.light-grey-background {
+  background-color: #D3D3D3;
+}
+
 .inline {
   display: inline;
 }

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # post 'air_bnb/search' => 'air_bnb#search'
   post 'airbnbs/find' => 'airbnbs#find'
   resources :users
+  get 'signup', to: 'users#new', as: 'signup'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
