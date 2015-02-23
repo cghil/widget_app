@@ -67,6 +67,10 @@ ul {
   height: 2px;
 }
 
+.height100percent {
+  height: 100%;
+}
+
 .resize-icon {
   margin-left: 50px;
   margin-right: auto;
