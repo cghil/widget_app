@@ -1,43 +1,79 @@
-<div class="pure-g">
-	<div class="pure-u-1-5 light-grey-background height100"> </div>
-	<div class="pure-u-3-5 blue-background height100">
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
 
-		<div class="page-header">
-			<h1>Sign Up!</h1>
-		</div>
-		
-			<%= form_for @user, html: {class: "pure-form pure-form-aligned"} do |f|%>
-			<% if @user.errors.any? %>
-			<div class="alert alert-danger">
-				<strong>
-					<%= pluralize(@user.errors.count, "error") %>
-					prevented you from signing up:
-				</strong>
-				<ul>
-					<% @user.errors.full_messages.each do |msg| %>
-						<li><%= msg %></li>
-				<% end %>
-				</ul>
-			</div>
-			<% end %>
-			<fieldset>
-					<div class="pure-control-group">
-						<%= f.label :email %>
-						<%= f.email_field :email  %>
-					</div>
+    <div id="menu">
+        <div class="pure-menu">
+            <%= link_to('Up & Running', root_path, {class: 'pure-menu-heading'})%>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><%= link_to('Home', root_path, {class: 'pure-menu-link' })%></li>
+                <li class="pure-menu-item"><%= link_to('Log In', login_path, {class: 'pure-menu-link' })%></li>
+                <li class="pure-menu-item"><%= link_to("Project's Github", 'https://github.com/cghil/widget_app', {class: 'pure-menu-link'}) %></li>
+            </ul>
+        </div>
+    </div>
 
-					<div class="pure-control-group">
-						<%=  f.label :password %>
-						<%= f.password_field :password %>
-					</div>
+    <div id="main">
+        <div class="header">
+            <h1>Sign Up for Up & Running</h1>
+            <h2>A little about me. Hi, I am Up & Running an app to help you jump out of bed and start your day off right. I am adding new widgets all the time.</h2>
+        </div>
 
-					<div class="pure-control-group">
-						<%= f.label :password_confirmation %>
-						<%= f.password_field :password_confirmation %>
-						<%= f.submit "Submit", class: "pure-button pure-button-primary"%>
-					</div>
-				<% end %>
-			</fieldset>
-	</div>
-	<div class="pure-u-1-5 light-grey-background height100"> </div>
+        <div class="content">
+            <h2 class="content-subhead">Please Sign Up!</h2>
+                <%= form_for @user, html: {class: "pure-form pure-form-aligned"} do |f|%>
+                <% if @user.errors.any? %>
+                <div class="alert alert-danger">
+                    <strong>
+                        <%= pluralize(@user.errors.count, "error") %>
+                        prevented you from signing up:
+                    </strong>
+                    <ul>
+                        <% @user.errors.full_messages.each do |msg| %>
+                            <li><%= msg %></li>
+                    <% end %>
+                    </ul>
+                </div>
+                <% end %>
+                <div class="text-center">
+                    <fieldset>
+                            <div class="pure-control-group">
+                                <%= f.label :email %>
+                                <%= f.email_field :email  %>
+                            </div>
+
+                            <div class="pure-control-group">
+                                <%=  f.label :password %>
+                                <%= f.password_field :password %>
+                            </div>
+
+                            <div class="pure-control-group">
+                                <%= f.label :password_confirmation %>
+                                <%= f.password_field :password_confirmation %>
+                            </div>
+                            <div class="pure-control-group">
+                                <%= f.submit "Submit", class: "pure-button pure-button-primary"%>
+                            </div>
+                        <% end %>
+                    </fieldset>
+                </div>
+            <div class="pure-g">
+                <div class="pure-u-1-4">
+                    <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
+                </div>
+                <div class="pure-u-1-4">
+                    <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
+                </div>
+                <div class="pure-u-1-4">
+                    <img class="pure-img-responsive" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store">
+                </div>
+                <div class="pure-u-1-4">
+                    <img class="pure-img-responsive" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

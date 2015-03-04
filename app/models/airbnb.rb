@@ -4,11 +4,11 @@ class Airbnb < ActiveRecord::Base
     array_of_cities = ['Berlin--Germany', 'San-Francisco--CA', 'Barcelona--Spain', 'Budapest--Hungary', 'New-York--NY', 'Munich--Germany'].sample
     url = "https://www.airbnb.com/s/#{array_of_cities}"
     doc = Nokogiri::HTML(open(url))
-    #i am filtering through all of this fucking html
+    #i am filtering through all of this html
     @urls = []
     url_nodes = doc.css('div.listing')
     13.times do
-      url_nodes.pop
+      url_nodes.pop #why am i popping? i don't want the results
     end
     url_nodes.each do |url|
       @urls << url.attributes['data-url'].value

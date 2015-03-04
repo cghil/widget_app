@@ -4,12 +4,16 @@ class UsersController < ApplicationController
   end
   def create
   	@user = User.new(user_params)
-    binding.pry
   	if @user.save
+      session[:user_id] = @user.id
   		redirect_to root_url
   	else
   		render 'new'	
   	end
+  end
+
+  def poop
+    render 'show'
   end
 
   def user_params
