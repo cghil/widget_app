@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129005719) do
+ActiveRecord::Schema.define(version: 20150225235611) do
 
   create_table "airbnbs", force: true do |t|
     t.datetime "created_at"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20150129005719) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
+    t.boolean  "airbnb_widget",   default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

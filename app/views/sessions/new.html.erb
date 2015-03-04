@@ -1,0 +1,20 @@
+<div class="page-header">
+	<h1 class="text-center"> Log In</h1>
+</div>
+
+<%= form_tag sessions_path, html: {class: pure-form pure-form-aligned}%>
+	<fieldset>
+		<div class="pure-control-group">
+			<%= label_tag :email %>
+			<%= email_field_tag :email, params[:email], placeholder: "Email"%>
+		</div>
+		
+		<div class="pure-control-group">
+			<%= label_tag :password %>
+			<%= password_field_tag :password, placeholder: "Password" %>
+			<%= f.submit "Log In", class: "pure-button pure-button-primary"%>
+		</div>
+		
+	</fieldset>
+
+<% end %>

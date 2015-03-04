@@ -1,0 +1,78 @@
+.room {
+  position: relative;
+  width: 100%;
+}
+
+.price {
+  position: absolute;
+  width: 40px;
+  top: 4px;
+  margin-left: 5px;
+  background-color: rgba(60,63,64,0.9);
+  color: white;
+}
+
+.overflow {
+  background-color: #fff;
+  overflow: scroll;
+}
+
+.resize-icon {
+  margin-left: 50px;
+  margin-right: auto;
+  width: 200px;
+  height: auto;
+}
+
+.opacity {
+    opacity: 0.1;
+}
+
+.opacity:hover {
+  opacity: 1;
+   -webkit-transition-delay: 90ms;
+}
+
+.opacity-less {
+  opacity: 0.2;
+}
+
+.opacity-less:hover {
+  opacity: 1;
+   -webkit-transition-delay: 90ms;
+}
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+       -o-transition: border .2s ease-in-out;
+          transition: border .2s ease-in-out;
+}
+
+.thumbnail > img,
+.thumbnail a > img {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #337ab7;
+}*/
+
+.thumbnail .caption {
+  padding: 9px;
+  color: #333;
+}
+
+.thumbnail .caption {
+  padding: 9px;
+  color: #333;
+}
